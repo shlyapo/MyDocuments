@@ -1,0 +1,25 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    {% if title %}
+    <title>{{title}} - auction</title>
+    {% else %}
+    <title>auction</title>
+    {% endif %}
+  </head>
+  <body>
+  <div id="header">
+    <span class="logo">Auction&Gallery</span>
+    <span class="user">
+            <a href="{{ url_for ('add_auction') }}">Add auction</a>
+            <a href="{{ url_for ('logout') }}">Logout</a>
+            <a href="{{ url_for ('list_apps_auction') }}">Application Auction</a>
+    </span>
+</div>
+    <div>Microblog:
+        <a href="{{ url_for('pictures') }}">Picture gallery</a>
+        <a href="{{ url_for('auctions') }}">Auctions</a>
+    </div>
+  </body>
+</html>
